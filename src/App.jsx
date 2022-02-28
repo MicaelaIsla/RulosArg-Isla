@@ -1,13 +1,15 @@
-import NavBar from './Components/NavBar';
 import Nosotros from './Components/paginas/Nosotros';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './Components/NavBar';
+import ItemListContainer from './Components/ItemListContainer';
+
 
 function App() {
   return (
     <div className="App">
-    
-   <NavBar/>  
+    <NavBar/>
+    <ItemListContainer/>
     </div>
   );
 }

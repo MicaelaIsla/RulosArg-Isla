@@ -27,3 +27,11 @@
 }
 a { color:lightseagreen;} 
 a:visited 
+
+
+.catalogo{
+  margin: 20px;
+  display: flex;
+ flex-direction: row;
+ 
+ }
