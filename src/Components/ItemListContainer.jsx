@@ -5,35 +5,38 @@ import '../App.css';
 import Nosotros from './paginas/Nosotros';
 import CartWidget from './CartWidget';
 import { Card, Button } from 'react-bootstrap';
-
+import ItemList from './ItemList';
+import Item from './Item';
+import { useState } from 'react';
 
 
 function ItemListContainer() {
+
+  const producto = (id, name,description, stock)=> ({
+    id: id,
+    name: name,
+    description: description,
+    stock: stock,
+  });
+
+  const promesa = new Promise ((res,rej ) => {
+    setTimeout(() =>{ 
+      res(producto(1, "Shampoo veganis", "Apto Low pow",14));
+    }, 3000);
+  });
+
+ // promesa.then(res)=>{
+ //   console.log(res)
+ // }
+
+//[producto, setProducto]= useState ([0])
+
+
   return (
     <>
-   <h3>Aqui va a ir el listado de productos disponibles en la tienda</h3>
-<Card style={{ width: '18rem' }}>
-<img src={fotoCat} alt="logo" />
-  <Card.Body>
-    <Card.Title>Shampoo Veganis</Card.Title>
-    <Card.Text>
-     Producto apto para Low Pow
-    </Card.Text>
-    <Button variant="primary">Agregar al carrito</Button>
-  </Card.Body>
-</Card>
+   <h3>Aqui van a estar los productos</h3>
+<Item />
 
-<br />
-<Card style={{ width: '18rem' }}>
-<img src={fotoCat} alt="logo" />
-  <Card.Body>
-    <Card.Title>Shampoo Veganis</Card.Title>
-    <Card.Text>
-     Producto apto para Low Pow
-    </Card.Text>
-    <Button variant="primary">Agregar al carrito</Button>
-  </Card.Body>
-</Card>
 
 
 </>
