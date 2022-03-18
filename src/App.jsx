@@ -7,6 +7,8 @@ import ItemCount from './Components/ItemCount';
 import ItemList from './Components/ItemList';
 import Item from './Components/Item';
 import { ItemListContainer } from './Components/ItemListContainer';
+import { PruebaFalsa } from "./apiPrueba/PruebaFalsa"
+
 
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
     <ItemListContainer/>
     <ItemCount/>
     <ItemList/>
-    
+    <PruebaFalsa/>
     </div>
   );
 }
