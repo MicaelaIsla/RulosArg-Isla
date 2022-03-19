@@ -1,0 +1,30 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+      width: 700px !important;
+}
+
+.container-modal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-modal-col{
+display: flex;
+justify-content: center;
+}
+
+
+
+
+.container-text > h5, .container-text > h6{
+    font-weight: bolder;
+}
+
+.container-text > p{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+

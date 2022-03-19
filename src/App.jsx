@@ -1,24 +1,32 @@
-import Nosotros from './Components/paginas/Nosotros';
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './Components/NavBar';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Footer from './components/Footer/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
-import ItemCount from './Components/ItemCount';
-import ItemList from './Components/ItemList';
-import Item from './Components/Item';
-import { ItemListContainer } from './Components/ItemListContainer';
-import { PruebaFalsa } from "./apiPrueba/PruebaFalsa"
+
 
 
 
 function App() {
   return (
-    <div className="App">
-    <NavBar/>
-    <ItemListContainer/>
-    <ItemCount/>
-    <ItemList/>
-    <PruebaFalsa/>
+    <div className="position">
+      <BrowserRouter>
+          <NavBar />
+
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+           
+            <Route path="/cart" element={<ItemListContainer />} />
+   
+          </Routes>
+
+          <Footer
+          />
+        
+      </BrowserRouter>
     </div>
   );
 }
